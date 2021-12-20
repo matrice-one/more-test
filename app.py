@@ -4,6 +4,7 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+<<<<<<< HEAD
 import plotly.express as px
 import pandas as pd
 from my_special import fig1
@@ -18,8 +19,12 @@ import pandas as pd
 import numpy as np
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
+=======
 
-app = dash.Dash(__name__)
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+>>>>>>> parent of 538b0ad (simple)
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 colors = {
     'background': '#1d492b',
@@ -300,7 +305,26 @@ def update_figure(selected_status):
 
     fig2.update_layout(transition_duration=500)
 
+<<<<<<< HEAD
     return fig2
+=======
+app.layout = html.Div([
+    html.H2('Hello World'),
+    dcc.Dropdown(
+        id='dropdown',
+        options=[{'label': i, 'value': i} for i in ['LA', 'NYC', 'MTL']],
+        value='LA'
+    ),
+    html.Div(id='display-value'),
+        html.H2('Hello World'),
+    dcc.Dropdown(
+        id='dropdown',
+        options=[{'label': i, 'value': i} for i in ['LA', 'NYC', 'MTL']],
+        value='LA'
+    ),
+    html.Div(id='display-value')
+])
+>>>>>>> parent of 538b0ad (simple)
 
 
 if __name__ == '__main__':
