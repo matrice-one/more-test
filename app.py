@@ -22,6 +22,9 @@ import plotly.graph_objects as go
 =======
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+<<<<<<< HEAD
+>>>>>>> parent of 538b0ad (simple)
+=======
 >>>>>>> parent of 538b0ad (simple)
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
